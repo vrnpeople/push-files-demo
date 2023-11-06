@@ -1,0 +1,5 @@
+###Below cron job used to print text to mentioned file in the below loacation###
+40 10 2 11 * echo "Hi this is kalpesh and my first cronfile" > /home/ubuntu/kalpeshcronfirst.txt
+
+###Below is the cronJob used to send details of current instances and current buckets created#####
+30 12 2 11 Thu bash /home/ubuntu/aws_instanceall1_kp.sh > /home/ubuntu/vrnalsaswad.txt

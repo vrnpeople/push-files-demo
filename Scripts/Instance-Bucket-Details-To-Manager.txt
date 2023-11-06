@@ -1,0 +1,17 @@
+#!/bin/bash
+########################
+## Author: Kalpesh Mali
+## Date: 2 November
+## Vesrion: V1
+## This script will send ec2 instances list to manager and will be stored in folder /home/ubuntu/
+
+#print the ec2 instances details and instanceId details
+
+#echo "Currently we are using instances..."
+#aws ec2 describe-instances
+
+echo "Instance Ids of currently using instances are..."
+aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'
+
+echo "currently buckets are using ..."
+aws s3 ls
